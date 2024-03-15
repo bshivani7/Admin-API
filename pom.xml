@@ -84,6 +84,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version>
 			<!-- <scope>runtime</scope> -->
 		</dependency>
 		<dependency>
@@ -313,6 +314,23 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+			<groupId>org.owasp</groupId>
+			<artifactId>dependency-check-maven</artifactId>
+			<version>9.0.8</version>
+			<configuration>
+			<format>HTML</format>
+			<nvdApiServerId>nvd</nvdApiServerId>
+			<nvdApiKey>79597933-f3cc-4601-949b-12513434ade3</nvdApiKey>
+			</configuration>
+			<executions>
+			<execution>
+			<goals>
+			<goal>check</goal>
+			</goals>
+			</execution>
+			</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
